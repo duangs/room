@@ -1,0 +1,17 @@
+<template name="item">
+	{{#if isCurrentUser uid}}
+	<div class="list-group row">
+		<div class="list-group-item col-xs-9 col-sm-9 col-md-9 col-lg-9 active pull-right">
+			<h4 class="list-group-item-heading">{{username}}</h4><span>{{dateformat created}}</span>
+			<p class="list-group-item-text">{{content}}</p>
+		</div>
+	</div>
+	{{else}}
+	<div class="list-group row">
+		<div class="list-group-item col-xs-9 col-sm-9 col-md-9 col-lg-9">
+			<h4 class="list-group-item-heading">{{username}}</h4><span>{{dateformat created}}</span>
+			<p class="list-group-item-text">{{content}}</p>
+		</div>
+	</div>
+	{{/if}}
+</template>

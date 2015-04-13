@@ -1,0 +1,11 @@
+<template name="room_title">
+	<h3 class="panel-title">聊天室</h3>
+	{{#if currentUser}}
+	<a id="logout" class="js-logout">Logout</a>
+	{{else}}
+    <div class="btns-group">
+      <a href="{{pathFor 'login'}}" class="btn-secondary">Sign In</a>
+      <a href="{{pathFor 'join'}}" class="btn-secondary">Join</a>
+    </div>
+  	{{/if}}
+</template>

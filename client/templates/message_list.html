@@ -1,0 +1,46 @@
+<template name="message_list">
+	<style type="text/css" media="screen">
+		@keyframes myfirst
+		{
+			0%		{transform: rotateY(0deg);}
+			100%	{transform: rotateY(-360deg);}
+		}
+
+		@-moz-keyframes myfirst /* Firefox */
+		{
+			0%		{transform: rotateY(0deg);}
+			100%	{transform: rotateY(-360deg);}
+		}
+
+		@-webkit-keyframes myfirst /* Safari 和 Chrome */
+		{
+			0%		{transform: rotateY(0deg);}
+			100%	{transform: rotateY(-360deg);}
+		}
+
+		@-o-keyframes myfirst /* Opera */
+		{
+			0%		{transform: rotateY(0deg);}
+			100%	{transform: rotateY(-360deg);}
+		}
+		.message_list .list-group-item{
+			animation: myfirst 1s;
+			-moz-animation: myfirst 1s;	/* Firefox */
+			-webkit-animation: myfirst 1s;	/* Safari 和 Chrome */
+			-o-animation: myfirst 1s;	/* Opera */
+			padding:5px 7px;
+		}
+
+		.message_list .list-group-item .list-group-item-heading{
+			margin-bottom: 0;
+		}
+	</style>
+	<div class="container-fluid message_list">
+		<div class="well well-sm well-none text-center row">
+			<span class="label label-info"> **** 加入群聊</span>
+		</div>
+		{{#each list}}
+		{{> item}}
+		{{/each}}
+	</div>
+</template>
